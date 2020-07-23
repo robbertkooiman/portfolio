@@ -45,7 +45,7 @@ const projects = [
         thumb: homesteadThumb,
         tags: ["Student", "Game"],
         year: 2017,
-        description: "My graduation project: a smooth blend between first-person, third-person and strategic control mechanisms."
+        description: "My graduation project: a smooth blend between first-person, third-person and strategic control mechanisms. Start off alone and gather an army to defeat another."
     },
     {
         name: "Plockuzzle",
@@ -53,7 +53,7 @@ const projects = [
         thumb: plockuzzleThumb,
         tags: ["Student", "Game"],
         year: 2014,
-        description: "A short puzzle game where you press buttons to move blocks, with a small twist at the end."
+        description: "A short puzzle game where you press buttons to move blocks, with a small twist at the end. My attempt at a minimalistic but breathtaking view, and big red buttons to press."
     },
     {
         name: "Xeonide",
@@ -61,7 +61,7 @@ const projects = [
         thumb: xeonideThumb,
         tags: ["Game"],
         year: 2010,
-        description: "A custom map for Halo: Reach. One of my earliest game design projects.",
+        description: "A custom map for Halo: Reach. One of my earliest game design projects. A symmetric arena with a logical layout and interesting sightlines, for 2v2 or 4v4 skirmishes.",
         actions: [
             {
                 text: "Watch Video",
@@ -75,7 +75,7 @@ const projects = [
         thumb: futureHouseThumb,
         tags: ["Architecture", "3D Modeling"],
         year: 2007,
-        description: "A 3D-drawing I made for a project showing the youth's vision of the future."
+        description: "A 3D drawing I made for a project showing the youth's vision of the future. My future's perfect house has it's own ecosystem, a small physical footprint and doesn't disturb the environment around it."
     }
 ];
 
