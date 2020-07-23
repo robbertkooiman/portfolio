@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Chip from './Chip';
 import ChipList from './ChipList';
-import Star from './Star';
 
 class Skillset extends Component {
     render() {

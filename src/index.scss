@@ -18,18 +18,9 @@ code {
     monospace;
 }
 
-a:link,
-a:visited {
-  color: #ca5100;
-  text-decoration: none;
-}
-
-a:hover, a.Active {
+a:hover,
+a.Active {
   text-decoration: underline;
-}
-
-a:active {
-  color: #f18900;
 }
 
 h1,
@@ -40,12 +31,13 @@ h3 {
 
 .Half {
   color: $half;
+
   a {
     opacity: 0.5;
   }
 }
 
-.Columns > p {
+.Columns>p {
   margin-bottom: 0;
 }
 
@@ -55,20 +47,38 @@ p {
   text-align: justify;
 }
 
-@media screen and (prefers-color-scheme: dark) {
+body {
+  background-color: #222;
+  color: white;
+}
+
+a:link,
+a:visited {
+  color: #ffae00;
+}
+
+a:active {
+  color: #ab7500;
+}
+
+@media screen and (prefers-color-scheme: light) {
+
   body {
-    background-color: #222;
-    color: white;
+    background-color: white;
+    color: black;
   }
 
   a:link,
   a:visited {
-    color: #ffae00;
+    color: #ca5100;
+    text-decoration: none;
   }
 
+
   a:active {
-    color: #ab7500;
+    color: #f18900;
   }
+
 }
 
 @media (min-width: 800px) {

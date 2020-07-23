@@ -5,7 +5,7 @@ import './Star.scss';
 class Star extends Component {
     render() {
         return (
-            <img className="Star" src={star} />
+            <img className="Star" alt="favorite" src={star} />
         );
     }
 }

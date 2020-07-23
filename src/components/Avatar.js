@@ -6,7 +6,7 @@ class Avatar extends Component {
     render() {
         return (
             <div className="Wrapper">
-                <img src={avatar} className="Avatar" />
+                <img src={avatar} alt="Robbert" className="Avatar" />
             </div>
         );
     }
