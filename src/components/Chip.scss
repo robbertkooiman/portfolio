@@ -1,0 +1,13 @@
+@import '../styles/colors';
+
+.Chip {
+    box-sizing: border-box;
+    padding: 5px 14px;
+    height: 36px;
+    background-color: $border;
+    border-radius: 18px;
+    user-select: none;
+    .Star {
+        margin-left: 4px;
+    }
+}

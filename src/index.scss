@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600&display=swap');
+@import './styles/colors';
+
+h1,
+h2 {
+  font-family: 'Grenze Gotisch', 'Lora', Georgia, serif;
+}
+
+body {
+  margin: 0;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 20px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a:link,
+a:visited {
+  color: #ca5100;
+  text-decoration: none;
+}
+
+a:hover, a.Active {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #f18900;
+}
+
+h1,
+h2,
+h3 {
+  margin: 12px 0;
+}
+
+.Half {
+  color: $half;
+  a {
+    opacity: 0.5;
+  }
+}
+
+.Columns > p {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 16px 0;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background-color: #222;
+    color: white;
+  }
+
+  a:link,
+  a:visited {
+    color: #ffae00;
+  }
+
+  a:active {
+    color: #ab7500;
+  }
+}
+
+@media (min-width: 800px) {
+  .Columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}

@@ -1,0 +1,26 @@
+@import '../styles/colors';
+
+.Avatar {
+    width: 200px;
+    max-width: 100%;
+    border-radius: 50%;
+    border: 1px solid $border;
+}
+
+.Wrapper {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    &::before {
+        display: block;
+        content: '';
+        height: 8px;
+        top: 50%;
+        z-index: -1;
+        width: 100%;
+        position: absolute;
+        border-top: solid 1px $border;
+        border-bottom: solid 1px $border;
+    }
+}
