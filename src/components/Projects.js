@@ -13,8 +13,10 @@ class Projects extends Component {
 
                 <div className="ProjectList">
                     {projects.map(project => (
-                        <div className="Project" style={{ backgroundImage: `url(${project.image})` }}>
-                            <div class="Content">
+                        <div className="Project">
+                            <div className="Image" style={{ backgroundImage: `url(${project.image})` }}>
+                            </div>
+                            <div className="Content">
                                 <h2>{project.name}</h2>
                                 <p>{project.description}</p>
                             </div>

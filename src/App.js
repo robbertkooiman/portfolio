@@ -5,16 +5,33 @@ import Home from './components/Home';
 import Header from './components/Header';
 import Projects from './components/Projects';
 import Vitae from './components/Vitae';
+import Page from "./components/Page";
 
 function App() {
+  const title = "Robbert Kooiman";
+  const routes = [
+    {
+      path: "/projects",
+      title: null,
+      component: Projects
+    },
+    {
+      path: "/vitae",
+      title: null,
+      component: Vitae
+    },
+    {
+      path: "/",
+      title: null,
+      component: Home
+    },
+  ]
   return (
     <div className="App">
       <Header />
       <main>
         <Switch>
-          <Route path="/projects" component={Projects}></Route>
-          <Route path="/vitae" component={Vitae}></Route>
-          <Route path="/" component={Home}></Route>
+          {routes.map(route => <Route path={route.path} render={(props) => (<Page title={route.title}>{React.createElement(route.component, props)}</Page>)}></Route>)}
         </Switch>
       </main>
     </div>
