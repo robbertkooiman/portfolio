@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
-import App from "../App";
 
 const Page = (props) => {
     useEffect(() => {
-        document.title = App.title + ' | ' + props.title || App.title;
+        document.title = props.title || '';
     }, [props.title]);
     return props.children;
 }

@@ -12,12 +12,12 @@ function App() {
   const routes = [
     {
       path: "/projects",
-      title: null,
+      title: 'Projects',
       component: Projects
     },
     {
       path: "/vitae",
-      title: null,
+      title: 'Vitae',
       component: Vitae
     },
     {
@@ -31,7 +31,7 @@ function App() {
       <Header />
       <main>
         <Switch>
-          {routes.map(route => <Route path={route.path} render={(props) => (<Page title={route.title}>{React.createElement(route.component, props)}</Page>)}></Route>)}
+          {routes.map(route => <Route path={route.path} render={(props) => (<Page title={route.title ? title + ' | ' + route.title : title}>{React.createElement(route.component, props)}</Page>)}></Route>)}
         </Switch>
       </main>
     </div>

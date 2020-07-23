@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Avatar.scss';
-import avatar from '../assets/robbert_bw.jpg';
+import avatar from '../assets/robbert_bw_400x400.jpg';
 
 class Avatar extends Component {
     render() {
