@@ -3,9 +3,9 @@
 .Projects {
     .ProjectList {
         display: grid;
-        grid-template-columns: 1fr 1fr;
         gap: 20px;
         margin-bottom: 20px;
+
         .Project {
             user-select: none;
             border-radius: 4px;
@@ -13,10 +13,12 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
+
             .Image {
                 background-size: cover;
                 background-position: center;
                 width: 100%;
+
                 &::before {
                     content: "";
                     display: inline-block;
@@ -25,20 +27,24 @@
                     padding-bottom: 9 / 16 * 100%;
                 }
             }
+
             .Content {
                 flex-grow: 1;
                 background-color: $foreground;
                 padding: 20px;
                 display: flex;
                 flex-direction: column;
+
                 h2 {
                     display: flex;
                     justify-content: space-between;
                     margin: 0;
                 }
+
                 p {
                     flex-grow: 1;
                 }
+
                 .ChipList {
                     a {
                         margin-right: 10px;
@@ -53,5 +59,13 @@
 @media screen and (prefers-color-scheme: light) {
     .Projects .ProjectList .Project .Content {
         background-color: $foreground-light;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .Projects {
+        .ProjectList {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }

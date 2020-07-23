@@ -47,18 +47,32 @@ body {
   color: white;
 }
 
+button {
+  background: none !important;
+  border: none;
+  padding: 0 !important;
+  font-size: 20px;
+  font-family: 'Lora', 'Georgia', serif;
+  cursor: pointer;
+  outline: none;
+}
+
 a:link,
-a:visited {
+a:visited,
+button {
   text-decoration: none;
   color: #ffae00;
 }
 
-a:active {
+a:active,
+button:active {
   color: #ab7500;
 }
 
 a:hover,
-a.Active {
+a.Active,
+button:hover,
+button.Active {
   text-decoration: underline;
 }
 
@@ -70,12 +84,14 @@ a.Active {
   }
 
   a:link,
-  a:visited {
+  a:visited,
+  button {
     color: #ca5100;
   }
 
 
-  a:active {
+  a:active,
+  button:active {
     color: #f18900;
   }
 

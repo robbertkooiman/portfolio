@@ -17,7 +17,7 @@ const projects = [
         thumb: kubion,
         tags: ["Web", "Design", "Branding"],
         year: 2019,
-        description: "I helped one of my previous employers find their company's unique branding and created a website for them from scratch.",
+        description: "I helped one of my previous employers find their company's unique branding and created a branding guide and an accompanying website for them from scratch.",
         actions: [
             {
                 text: "View",
@@ -31,7 +31,7 @@ const projects = [
         thumb: ctgbThumb,
         tags: ["Web", "Angular"],
         year: 2019,
-        description: "An accessible database of plant protection products that was due a fresh look, while still staying true to the older version.",
+        description: "An accessible database of plant protection products that was due an update, while still staying true to the older version in order not to alienate customers.",
         actions: [
             {
                 text: "View",
@@ -45,7 +45,13 @@ const projects = [
         thumb: homesteadThumb,
         tags: ["Student", "Game"],
         year: 2017,
-        description: "My graduation project: a smooth blend between first-person, third-person and strategic control mechanisms. Start off alone and gather an army to defeat another."
+        description: "My graduation project: a smooth blend between first-person, third-person and strategic control mechanisms. Start off alone and gather an army to defeat another.",
+        actions: [
+            {
+                text: "Play",
+                link: "http://robbertkooiman.com/homestead_web/"
+            }
+        ]
     },
     {
         name: "Plockuzzle",
