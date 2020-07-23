@@ -5,3 +5,11 @@
         }
     }
 }
+@media (min-width: 800px) {
+    .Timeline ul {
+        padding: 0;
+        gap: 10px 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
