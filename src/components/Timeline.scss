@@ -1,4 +1,7 @@
+@import "../styles/colors";
+
 .Timeline {
+    border-top: 1px solid $border;
     ul {
         li {
             margin-bottom: 12px;

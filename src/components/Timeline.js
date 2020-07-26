@@ -48,8 +48,8 @@ class Timeline extends Component {
             what: "VWO Diploma in Nature and Tech (Pre-U)",
             where: "UniC College Utrecht",
             link: "https://www.unic-utrecht.nl/",
-            from: 2013,
-            to: 2017
+            from: 2007,
+            to: 2013
         },
     ]
     render() {
