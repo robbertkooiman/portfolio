@@ -14,15 +14,15 @@ class Projects extends Component {
                 </p>
                 <div className="ProjectList">
                     {projects.map(project => (
-                        <div className="Project">
+                        <div className="Project" key={project.name}>
                             <div className="Image" style={{ backgroundImage: `url(${project.thumb})` }}>
                             </div>
                             <div className="Content">
                                 <h2>{project.name} <span className="Half">{project.year}</span></h2>
                                 <p>{project.description}</p>
                                 <ChipList>
-                                    {project.actions ? project.actions.map(action => <a target="_blank" rel="noopener noreferrer" href={action.link}>{action.text}</a>) : null}
-                                    {project.tags.map(tag => <Chip>{tag}</Chip>)}
+                                    {project.actions ? project.actions.map(action => <a target="_blank" rel="noopener noreferrer" key={action.text} href={action.link}>{action.text}</a>) : null}
+                                    {project.tags.map(tag => <Chip key={tag}>{tag}</Chip>)}
                                 </ChipList>
                             </div>
                         </div>)

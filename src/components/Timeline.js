@@ -4,6 +4,7 @@ import './Timeline.scss';
 class Timeline extends Component {
     timeline = [
         {
+            key: "master-computer-science",
             what: "MSc Advanced Computer Science",
             where: "Oxford Brookes University",
             link: "https://www.brookes.ac.uk/",
@@ -11,6 +12,7 @@ class Timeline extends Component {
             to: null
         },
         {
+            key: "trivento",
             what: "Frontend Developer",
             where: "Trivento",
             link: "https://trivento.nl/",
@@ -18,6 +20,7 @@ class Timeline extends Component {
             to: 2019
         },
         {
+            key: "metadimensions",
             what: "Lead Frontend Developer",
             where: "MetaDimensions",
             link: "https://metadimensions.com/",
@@ -25,6 +28,7 @@ class Timeline extends Component {
             to: 2018
         },
         {
+            key: "kubion",
             what: "UX Designer / Frontend Developer",
             where: "Kubion",
             link: "https://www.kubion.nl/",
@@ -32,6 +36,7 @@ class Timeline extends Component {
             to: 2017
         },
         {
+            key: "bachelor-game-development",
             what: "BSc (Hons) Game Design and Development",
             where: "HKU University of the Arts Utrecht",
             link: "https://www.hku.nl/Home.htm",
@@ -39,12 +44,14 @@ class Timeline extends Component {
             to: 2017
         },
         {
+            key: "mycom",
             what: "Shift Manager",
             where: "MyCom",
             from: 2012,
             to: 2015
         },
         {
+            key: "vwo",
             what: "VWO Diploma in Nature and Tech (Pre-U)",
             where: "UniC College Utrecht",
             link: "https://www.unic-utrecht.nl/",
@@ -60,7 +67,7 @@ class Timeline extends Component {
                 </h2>
                 <ul>
                     {this.timeline.map(item => (
-                        <li>{item.what}<br />
+                        <li key={item.key}>{item.what}<br />
                             {item.link ? <a href={item.link}>{item.where}</a> : item.where}<br />
                             <span className="Half">{item.from} - {item.to ? item.to : 'now'}</span></li>
                     ))}
