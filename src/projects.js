@@ -3,16 +3,19 @@ import homestead from "./assets/homestead.png";
 import xeonide from "./assets/xeonide.png";
 import futureHouse from "./assets/future-house.png";
 import ctgb from "./assets/ctgb.png";
+import noordzee from "./assets/noordzee.png";
 import kubion from "./assets/kubion.png";
 import plockuzzleThumb from "./assets/plockuzzle_thumb.png";
 import homesteadThumb from "./assets/homestead_thumb.png";
 import xeonideThumb from "./assets/xeonide_thumb.png";
 import futureHouseThumb from "./assets/future-house_thumb.png";
 import ctgbThumb from "./assets/ctgb_thumb.png";
+import noordzeeThumb from "./assets/noordzee_thumb.png";
 
 const projects = [
     {
         name: "Kubion",
+        slug: "kubion",
         image: kubion,
         thumb: kubion,
         tags: ["Web", "Design", "Branding"],
@@ -27,6 +30,7 @@ const projects = [
     },
     {
         name: "CTGB Accessible Database",
+        slug: "ctgb",
         image: ctgb,
         thumb: ctgbThumb,
         tags: ["Web", "Angular"],
@@ -41,6 +45,7 @@ const projects = [
     },
     {
         name: "Homestead",
+        slug: "homestead",
         image: homestead,
         thumb: homesteadThumb,
         tags: ["Student", "Game"],
@@ -54,7 +59,23 @@ const projects = [
         ]
     },
     {
+        name: "Het Lot van de Noordzee",
+        slug: "noordzee",
+        image: noordzee,
+        thumb: noordzeeThumb,
+        tags: ["Web", "Game", "Networking"],
+        year: 2017,
+        description: "I lead a project for the WWF to educate high school students about sustainability and environmental issues in the North Sea, in a gamified multiplayer experience.",
+        actions: [
+            {
+                text: "View",
+                link: "https://www.lotvandenoordzee.nl"
+            },
+        ]
+    },
+    {
         name: "Plockuzzle",
+        slug: "plockuzzle",
         image: plockuzzle,
         thumb: plockuzzleThumb,
         tags: ["Student", "Game"],
@@ -63,6 +84,7 @@ const projects = [
     },
     {
         name: "Xeonide",
+        slug: "xeonide",
         image: xeonide,
         thumb: xeonideThumb,
         tags: ["Game"],
@@ -77,6 +99,7 @@ const projects = [
     },
     {
         name: "House of the Future",
+        slug: "future-house",
         image: futureHouse,
         thumb: futureHouseThumb,
         tags: ["Architecture", "3D Modeling"],
