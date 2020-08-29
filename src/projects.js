@@ -71,7 +71,7 @@ const projects = [
         actions: [
             {
                 text: "Play",
-                link: "http://robbertkooiman.com/homestead_web/"
+                link: "http://robbertkooiman.com/homestead_web/index.html"
             }
         ]
     },
