@@ -16,7 +16,7 @@ class Vitae extends Component {
                             I've always been interested in interaction. Every representation of an interface is something I aim to perfect. As a learned game designer and experienced web developer and UX designer, I've always tried to maintain a versatile skillset to be able to contribute to all kinds of projects. I value minimalism and struggle with perfectionism.
                         </p>
                         <p>
-                            Recently, I've decided to chase some athletic dreams as well as educational ones, by starting a master's degree in computer science and joining the rowing team at <a target="_blank" rel="noopener noreferrer" href="https://www.brookes.ac.uk/">Oxford Brookes University</a>.
+                            Recently, I've decided to chase some athletic dreams as well as educational ones, by starting a master's degree and joining the rowing team at <a target="_blank" rel="noopener noreferrer" href="https://www.brookes.ac.uk/">Oxford Brookes University</a>.
                         </p>
                         <a target="_blank" rel="noopener noreferrer" href={resume}>Download my curriculum vitae</a>
                     </div>

@@ -5,14 +5,31 @@ import futureHouse from "./assets/future-house.png";
 import ctgb from "./assets/ctgb.png";
 import noordzee from "./assets/noordzee.png";
 import kubion from "./assets/kubion.png";
+import portfolio from "./assets/portfolio.png";
 import plockuzzleThumb from "./assets/plockuzzle_thumb.png";
 import homesteadThumb from "./assets/homestead_thumb.png";
 import xeonideThumb from "./assets/xeonide_thumb.png";
 import futureHouseThumb from "./assets/future-house_thumb.png";
 import ctgbThumb from "./assets/ctgb_thumb.png";
 import noordzeeThumb from "./assets/noordzee_thumb.png";
+import portfolioThumb from "./assets/portfolio_thumb.png";
 
 const projects = [
+    {
+        name: "Portfolio website",
+        slug: "portfolio",
+        image: portfolio,
+        thumb: portfolioThumb,
+        tags: ["Web", "React"],
+        year: 2020,
+        description: "I like to make things my own, and so I've created my own portfolio website from scratch with React. The entire source code is public, feel free to browse! It supports dark mode.",
+        actions: [
+            {
+                text: "View source",
+                link: "https://github.com/robbertkooiman/portfolio"
+            }
+        ]
+    },
     {
         name: "Kubion",
         slug: "kubion",
@@ -20,7 +37,7 @@ const projects = [
         thumb: kubion,
         tags: ["Web", "Design", "Branding"],
         year: 2019,
-        description: "I helped one of my previous employers find their company's unique branding and created a branding guide and an accompanying website for them from scratch.",
+        description: "One of my previous employers who I've helped find their company's unique branding. I created a branding guide and an accompanying website for them from scratch.",
         actions: [
             {
                 text: "View",
@@ -65,7 +82,7 @@ const projects = [
         thumb: noordzeeThumb,
         tags: ["Web", "Game", "Networking"],
         year: 2017,
-        description: "I lead a project for the WWF to educate high school students about sustainability and environmental issues in the North Sea, in a gamified multiplayer experience.",
+        description: "A project I developed in co-operation with a friend for the WWF to educate high school students about environmental issues in the North Sea, in a gamified multiplayer experience.",
         actions: [
             {
                 text: "View",
@@ -104,7 +121,7 @@ const projects = [
         thumb: futureHouseThumb,
         tags: ["Architecture", "3D Modeling"],
         year: 2007,
-        description: "A 3D drawing I made for a project showing the youth's vision of the future. My future's perfect house has it's own ecosystem, a small physical footprint and doesn't disturb the environment around it."
+        description: "A 3D drawing I made when I was 12 for a project showing the youth's vision of the future. My house has it's own ecosystem a small physical and environmental footprint."
     }
 ];
 

@@ -4,11 +4,18 @@ import './Timeline.scss';
 class Timeline extends Component {
     timeline = [
         {
+            what: "MArch Architecture",
+            where: "Oxford Brookes University",
+            link: "https://www.brookes.ac.uk/",
+            from: 2020,
+            to: null
+        }, 
+        {
             what: "MSc Advanced Computer Science",
             where: "Oxford Brookes University",
             link: "https://www.brookes.ac.uk/",
             from: 2019,
-            to: null
+            to: 2020
         },
         {
             what: "Frontend Developer",
