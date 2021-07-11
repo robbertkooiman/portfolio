@@ -4,15 +4,17 @@ import './Chip.scss';
 import Button from './Button';
 
 function Chip(props) {
-    console.log(props);
     return (
         props.onClick ?
             <Button className="Chip" onClick={props.onClick}>
                 {props.children} {props.star ? <Star /> : null}
             </Button>
-            : <li className="Chip">
+            : props.span ? <span className="Chip">
                 {props.children} {props.star ? <Star /> : null}
-            </li>);
+            </span>
+                : <li className="Chip">
+                    {props.children} {props.star ? <Star /> : null}
+                </li>);
 }
 
 export default Chip;

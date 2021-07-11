@@ -9,7 +9,7 @@ class Vitae extends Component {
     render() {
         return (
             <div className="Vitae">
-                <div className="Columns">
+                <div className="Narrow">
                     <div>
                         <Avatar />
                         <p>
