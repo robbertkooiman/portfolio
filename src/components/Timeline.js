@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
+import ChipList from './ChipList';
+import Chip from './Chip';
 import './Timeline.scss';
 
-class Timeline extends Component {
-    timeline = [
+function Timeline() {
+    const [filter, setFilter] = useState(null);
+    const timeline = [
         {
+            key: "architecture",
+            type: "education",
             what: "MArch Architecture",
             where: "Oxford Brookes University",
             link: "https://www.brookes.ac.uk/",
             from: 2020,
-            to: null
-        }, 
+            to: 2021
+        },
         {
+            key: "compscience",
+            type: "education",
             what: "MSc Advanced Computer Science",
             where: "Oxford Brookes University",
             link: "https://www.brookes.ac.uk/",
@@ -19,6 +26,7 @@ class Timeline extends Component {
         },
         {
             key: "trivento",
+            type: "work",
             what: "Frontend Developer",
             where: "Trivento",
             link: "https://trivento.nl/",
@@ -27,6 +35,7 @@ class Timeline extends Component {
         },
         {
             key: "metadimensions",
+            type: "work",
             what: "Lead Frontend Developer",
             where: "MetaDimensions",
             link: "https://metadimensions.com/",
@@ -35,6 +44,7 @@ class Timeline extends Component {
         },
         {
             key: "kubion",
+            type: "work",
             what: "UX Designer / Frontend Developer",
             where: "Kubion",
             link: "https://www.kubion.nl/",
@@ -43,6 +53,7 @@ class Timeline extends Component {
         },
         {
             key: "bachelor-game-development",
+            type: "education",
             what: "BSc (Hons) Game Design and Development",
             where: "HKU University of the Arts Utrecht",
             link: "https://www.hku.nl/Home.htm",
@@ -51,6 +62,7 @@ class Timeline extends Component {
         },
         {
             key: "mycom",
+            type: "work",
             what: "Shift Manager",
             where: "MyCom",
             from: 2012,
@@ -58,6 +70,7 @@ class Timeline extends Component {
         },
         {
             key: "vwo",
+            type: "education",
             what: "VWO Diploma in Nature and Tech (Pre-U)",
             where: "UniC College Utrecht",
             link: "https://www.unic-utrecht.nl/",
@@ -65,22 +78,28 @@ class Timeline extends Component {
             to: 2013
         },
     ]
-    render() {
-        return (
-            <div className="Timeline">
-                <h2>
-                    Timeline
+
+    return (
+        <div className="Timeline">
+            <h2>
+                Timeline
                 </h2>
-                <ul>
-                    {this.timeline.map(item => (
-                        <li key={item.key}>{item.what}<br />
-                            {item.link ? <a href={item.link}>{item.where}</a> : item.where}<br />
-                            <span className="Half">{item.from} - {item.to ? item.to : 'now'}</span></li>
-                    ))}
-                </ul>
-            </div>
-        );
-    }
+            <ChipList>
+                <Chip onClick={() => setFilter(null)}>Everything</Chip>
+                <Chip onClick={() => setFilter("work")}>Jobs</Chip>
+                <Chip onClick={() => setFilter("freelance")}>Freelance</Chip>
+                <Chip onClick={() => setFilter("row")}>Rowing</Chip>
+                <Chip onClick={() => setFilter("education")}>Education</Chip>
+            </ChipList>
+            <ul className="TimelineItems">
+                {timeline.filter(item => !filter || item.type === filter).map(item => (
+                    <li key={item.key}>{item.what}<br />
+                        {item.link ? <a href={item.link}>{item.where}</a> : item.where}<br />
+                        <span className="Half">{item.from} - {item.to ? item.to : 'now'}</span></li>
+                ))}
+            </ul>
+        </div>
+    );
 }
 
 export default Timeline;

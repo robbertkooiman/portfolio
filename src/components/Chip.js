@@ -1,13 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Star from './Star';
 import './Chip.scss';
+import Button from './Button';
 
-class Chip extends Component {
-    render() {
-        return (
-            <li className="Chip">{this.props.children} {this.props.star ? <Star /> : null}</li>
-        );
-    }
+function Chip(props) {
+    console.log(props);
+    return (
+        props.onClick ?
+            <Button className="Chip" onClick={props.onClick}>
+                {props.children} {props.star ? <Star /> : null}
+            </Button>
+            : <li className="Chip">
+                {props.children} {props.star ? <Star /> : null}
+            </li>);
 }
 
 export default Chip;

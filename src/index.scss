@@ -104,3 +104,9 @@ button.Active {
     gap: 40px;
   }
 }
+
+@media print {
+  body {
+    color: black;
+  }
+}
