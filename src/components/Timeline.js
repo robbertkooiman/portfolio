@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ChipList from './ChipList';
 import Chip from './Chip';
 import './Timeline.scss';
-import useApi from '../hooks/useApi';
+import { useApi } from '../hooks/useApi';
 
 function Timeline() {
     const [filter, setFilter] = useState(null);

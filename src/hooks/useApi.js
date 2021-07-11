@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const urlBase = 'http://localhost:8080/';
+export const urlBase = 'http://localhost:8080/';
 
-const useApi = url => {
+export const useApi = url => {
     const [data, setData] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
     const [error, setError] = useState(null);
@@ -26,4 +26,4 @@ const useApi = url => {
     return { error, isLoaded, data };
 };
 
-export default useApi;
+export default { useApi, urlBase };

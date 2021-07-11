@@ -1,5 +1,5 @@
 import React from 'react';
-import useApi from '../hooks/useApi';
+import { useApi } from '../hooks/useApi';
 import Chip from './Chip';
 import ChipList from './ChipList';
 
