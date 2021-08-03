@@ -18,7 +18,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "docker": "npm run docker:build && npm run docker:clean && npm run docker:run",
+    "docker:build": "docker build -f Dockerfile.prod -t portfolio-image .",
+    "docker:clean": "docker rm -f portfolio-frontend || true",
+    "docker:run": "docker run --name portfolio-frontend -dt -p 8090:80 portfolio-image"
   },
   "eslintConfig": {
     "extends": "react-app"
