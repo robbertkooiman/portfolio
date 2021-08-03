@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-export const urlBase = 'http://localhost:8080/';
+const urlBase = 'http://localhost:8080/';
 
 export const useApi = url => {
     const [data, setData] = useState([]);
@@ -26,4 +26,6 @@ export const useApi = url => {
     return { error, isLoaded, data };
 };
 
-export default { useApi, urlBase };
+export const getImageUrl = id => {
+    return urlBase + 'assets/' + id;
+}

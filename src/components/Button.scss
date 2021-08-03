@@ -3,4 +3,18 @@
 .Button {
     background-color: transparent;
     border: none;
+    &.Chip {
+        box-sizing: border-box;
+        padding: 5px 14px;
+        height: 36px;
+        background-color: $border;
+        border-radius: 18px;
+        user-select: none;
+        .Star {
+            margin-left: 4px;
+        }
+    }
+    &.Selected {
+        text-decoration: underline;
+    }
 }

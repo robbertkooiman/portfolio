@@ -16,16 +16,18 @@ function Timeline() {
 
     return (
         <div className="Timeline">
-            <h2>
-                Timeline
-            </h2>
-            {
-                !timelineTypes.isLoaded && timelineTypes.data ? <p>loading...</p> :
-                    <ChipList>
-                        <Chip key="everything" onClick={() => setFilter(null)}>Everything</Chip>
-                        {timelineTypes.data.map(type => <Chip key={type.type} onClick={() => setFilter(type.type)}>{type.description}</Chip>)}
-                    </ChipList>
-            }
+            <div className="TimelineHeader">
+                <h2>
+                    Timeline
+                </h2>
+                {
+                    !timelineTypes.isLoaded && timelineTypes.data ? <p>loading...</p> :
+                        <ChipList>
+                            <Chip key="everything" onClick={() => setFilter(null)} className={filter === null ? "Selected" : null}>Everything</Chip>
+                            {timelineTypes.data.map(type => <Chip key={type.type} onClick={() => setFilter(type.type)} className={filter === type.type ? "Selected" : null}>{type.description}</Chip>)}
+                        </ChipList>
+                }
+            </div>
             {
                 !timeline.isLoaded && timeline.data ? <p>loading...</p> :
                     <ul className="TimelineItems">

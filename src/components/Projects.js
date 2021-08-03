@@ -2,14 +2,10 @@ import React from 'react';
 import './Projects.scss';
 import Chip from "./Chip";
 import ChipList from "./ChipList";
-import { useApi, urlBase } from "../hooks/useApi";
+import { useApi, getImageUrl } from "../hooks/useApi";
 
 function Projects() {
     const projects = useApi('items/projects?fields=*,tags.tags_id.*,thumbnail');
-
-    function getThumbnail(id) {
-        return urlBase + 'assets/' + id;
-    }
 
     return (
         <div className="Projects">
@@ -20,7 +16,7 @@ function Projects() {
                 {projects.isLoaded ?
                     projects.data.map(project => (
                         <div className="Project" key={project.id}>
-                            <div className="Image" style={{ backgroundImage: `url(${getThumbnail(project.thumbnail)})` }}>
+                            <div className="Image" style={{ backgroundImage: `url(${getImageUrl(project.thumbnail)})` }}>
                             </div>
                             <div className="Content">
                                 <h2>{project.title} <span className="Half">{project.year}</span></h2>

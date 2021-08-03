@@ -2,24 +2,42 @@
 
 .Timeline {
     border-top: 1px solid $border;
-    ul {
+
+    .TimelineItems {
+        margin-left: 20px;
+        padding: 0;
+        gap: 10px 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+
         li {
             margin-bottom: 12px;
+
             .Footer {
                 margin-top: 8px;
             }
+
             .Chip {
                 margin-right: 8px;
                 margin-left: -14px;
             }
         }
     }
+
+    .TimelineHeader {
+        h2 {
+            display: inline-block;
+        }
+
+        .ChipList {
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
 }
+
 @media (min-width: 800px) {
     .Timeline .TimelineItems {
-        padding: 0;
-        gap: 10px 40px;
-        display: grid;
         grid-template-columns: 1fr 1fr;
     }
 }

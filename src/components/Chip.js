@@ -6,7 +6,7 @@ import Button from './Button';
 function Chip(props) {
     return (
         props.onClick ?
-            <Button className="Chip" onClick={props.onClick}>
+            <Button className={`Chip ${props.className ? props.className : ''}`} onClick={props.onClick}>
                 {props.children} {props.star ? <Star /> : null}
             </Button>
             : props.span ? <span className="Chip">

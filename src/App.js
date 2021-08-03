@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Projects from './components/Projects';
 import Vitae from './components/Vitae';
 import Page from "./components/Page";
+import Footer from './components/Footer';
 
 function App() {
   const title = "Robbert Kooiman";
@@ -37,6 +38,7 @@ function App() {
           <Route exact path="/"><Redirect to="/vitae"></Redirect></Route>
         </Switch>
       </main>
+      <Footer />
     </div>
   );
 }

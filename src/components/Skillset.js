@@ -26,7 +26,6 @@ function Skillset() {
             <p className="Half">Stars are personal favourites. My preference between Angular and React depends on the position of the stars and the <a target="weather" href="https://www.google.com/search?q=weather+in+Eikefjord">current weather in Eikefjord</a>.</p>
         </div>
     );
-
 }
 
 export default Skillset;
