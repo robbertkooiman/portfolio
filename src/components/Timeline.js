@@ -7,12 +7,67 @@ function Timeline() {
     const [filter, setFilter] = useState(null);
     const timeline = [
         {
+            key: "met2",
+            type: "row",
+            what: "🥇 Metropolitan Regatta Academic 8+",
+            where: "Oxford Brookes B",
+            from: 2022
+        },
+        {
+            key: "bucs1",
+            type: "row",
+            what: "🥇 BUCS Regatta Champions 4-",
+            where: "Oxford Brookes",
+            link: "https://results.bucsrowing.org.uk/results/regatta2021/Race472.pdf",
+            from: 2021
+        },
+        {
+            key: "bucs2",
+            type: "row",
+            what: "🥇 BUCS Regatta Champions 8+",
+            where: "Oxford Brookes A",
+            link: "https://results.bucsrowing.org.uk/results/regatta2021/Race285.pdf",
+            from: 2021
+        },
+        {
+            key: "marlow",
+            type: "row",
+            what: "🥉 Marlow Regatta Champions 8+",
+            where: "Oxford Brookes B",
+            link: "https://www.rowresults.co.uk/results/met21sun/Race66.pdf",
+            from: 2021
+        },
+        {
+            key: "met1",
+            type: "row",
+            what: "🥇 Metropolitan Regatta Academic 8+",
+            where: "Oxford Brookes B",
+            from: 2021
+        },
+        {
             key: "architecture",
             type: "education",
             what: "MArch Architecture",
             where: "Oxford Brookes University",
             link: "https://www.brookes.ac.uk/",
             from: 2020,
+            to: 2021
+        },
+        {
+            key: "databalk",
+            type: "freelance",
+            what: "Frontend developer",
+            where: "DataBalk",
+            link: "https://databalk.nu/",
+            from: 2021
+        },
+        {
+            key: "dolkhesper",
+            type: "freelance",
+            what: "Frontend Developer",
+            where: "DolkHesper",
+            link: "https://www.dolkhesper.com/",
+            from: 2019,
             to: 2021
         },
         {
@@ -34,6 +89,14 @@ function Timeline() {
             to: 2019
         },
         {
+            key: "arb",
+            type: "row",
+            what: "🥇 ARB Regatta",
+            where: "Orca EJZ 2018",
+            link: "https://orcaroeien.nl/",
+            from: 2018
+        },
+        {
             key: "metadimensions",
             type: "work",
             what: "Lead Frontend Developer",
@@ -41,6 +104,30 @@ function Timeline() {
             link: "https://metadimensions.com/",
             from: 2017,
             to: 2018
+        },
+        {
+            key: "hofvijver",
+            type: "row",
+            what: "🥇 Hofvijver Regatta",
+            where: "Orca Clubacht 2017",
+            link: "https://orcaroeien.nl/",
+            from: 2017
+        },
+        {
+            key: "peil",
+            type: "row",
+            what: "🥇 Peil Regatta",
+            where: "Orca Clubacht 2016",
+            link: "https://orcaroeien.nl/",
+            from: 2017
+        },
+        {
+            key: "erasmus",
+            type: "row",
+            what: "🥇 Erasmus Sprints",
+            where: "Orca Clubacht 2016",
+            link: "https://orcaroeien.nl/",
+            from: 2017
         },
         {
             key: "kubion",
@@ -83,7 +170,7 @@ function Timeline() {
         <div className="Timeline">
             <h2>
                 Timeline
-                </h2>
+            </h2>
             <ChipList>
                 <Chip onClick={() => setFilter(null)}>Everything</Chip>
                 <Chip onClick={() => setFilter("work")}>Jobs</Chip>
@@ -95,7 +182,7 @@ function Timeline() {
                 {timeline.filter(item => !filter || item.type === filter).map(item => (
                     <li key={item.key}>{item.what}<br />
                         {item.link ? <a href={item.link}>{item.where}</a> : item.where}<br />
-                        <span className="Half">{item.from} - {item.to ? item.to : 'now'}</span></li>
+                        <span className="Half">{item.from} {item.to ? '- ' + item.to : null}</span></li>
                 ))}
             </ul>
         </div>
