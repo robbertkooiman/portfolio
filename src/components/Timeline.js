@@ -175,11 +175,11 @@ function Timeline() {
                 <Chip onClick={() => setFilter(null)}>Everything</Chip>
                 <Chip onClick={() => setFilter("work")}>Jobs</Chip>
                 <Chip onClick={() => setFilter("freelance")}>Freelance</Chip>
-                <Chip onClick={() => setFilter("row")}>Rowing</Chip>
+                {/* <Chip onClick={() => setFilter("row")}>Rowing</Chip> */}
                 <Chip onClick={() => setFilter("education")}>Education</Chip>
             </ChipList>
             <ul className="TimelineItems">
-                {timeline.filter(item => !filter || item.type === filter).map(item => (
+                {timeline.filter((item => item.type !== 'row' && (!filter || item.type === filter))).map(item => (
                     <li key={item.key}>{item.what}<br />
                         {item.link ? <a href={item.link}>{item.where}</a> : item.where}<br />
                         <span className="Half">{item.from} {item.to ? '- ' + item.to : null}</span></li>

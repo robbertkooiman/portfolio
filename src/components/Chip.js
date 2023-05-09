@@ -4,7 +4,6 @@ import './Chip.scss';
 import Button from './Button';
 
 function Chip(props) {
-    console.log(props);
     return (
         props.onClick ?
             <Button className="Chip" onClick={props.onClick}>
